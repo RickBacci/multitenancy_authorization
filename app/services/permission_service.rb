@@ -12,7 +12,7 @@ class PermissionService
     @controller = controller
     @action = action
 
-    if user.registered_user?
+    if user.store_admin?
       store_admin_permissions
     elsif user.registered_user?
       registered_user_permissions
